@@ -12,7 +12,7 @@
     "email": "support@gymate.io",
     "url": "https://opensource.gymate.io"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.77.0"
   },
