@@ -1,0 +1,88 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Fusion",
+	"patterns": [
+		{
+			"captures": {
+				"1": {
+					"name": "keyword.control.fusion"
+				},
+				"2": {
+					"name": "entity.name.function.fusion"
+				},
+				"3": {
+					"name": "punctuation.definition.parameters.begin.fusion"
+				},
+				"4": {
+					"name": "variable.parameter.function.fusion"
+				},
+				"5": {
+					"name": "punctuation.definition.parameters.end.fusion"
+				}
+			},
+			"match": "\\b(impl)(?:\\s+([a-zA-Z0-9_]+))?(\\()([^)]*)(\\))",
+			"name": "meta.function.fusion"
+		},
+		{
+			"match": "(?<![\\d.])\\s0x[a-fA-F\\d]+|\\b\\d+(\\.\\d+)?([eE]-?\\d+)?|\\.\\d+([eE]-?\\d+)?",
+			"name": "constant.numeric.fusion"
+		},
+		{
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.fusion"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.fusion"
+				}
+			},
+			"name": "string.quoted.single.fusion",
+			"patterns": [
+				{
+					"match": "\\\\.",
+					"name": "constant.character.escape.fusion"
+				}
+			]
+		},
+		{
+			"name": "comment.line.fusion",
+			"begin": "\\#",
+			"end": "^"
+		},
+		{
+			"match": "\\b(break|do|else|for|if|return|while|impl|in)\\b",
+			"name": "keyword.control.fusion"
+		},
+		{
+			"match": "\\b(import|from|as)\\b",
+			"name": "keyword.other.import.fusion"
+		},
+		{
+			"match": "\\b(false|null|true)\\b",
+			"name": "constant.language.fusion"
+		},
+		{
+			"match": "\\b(print|input|exit)\\b",
+			"name": "support.function.fusion"
+		},
+		{
+			"match": "\\b([A-Za-z_]\\w*)\\b(?=\\s*(?:[({\"']|\\[\\[))",
+			"name": "entity.name.function"
+		},
+		{
+			"match": "\\+|-|%|#|\\*|\\/|\\^|==?|~=|<=?|>=?|(?<!\\.)\\.{2}(?!\\.)",
+			"name": "keyword.operator.fusion"
+		},
+		{
+			"match": "[a-zA-Z0-9_]+",
+			"name": "variable.name.fusion"
+		}
+	],
+	"repository": {
+	},
+	"scopeName": "source.fusion"
+}

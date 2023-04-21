@@ -1,0 +1,34 @@
+{
+  "name": "fusion-lang",
+  "displayName": "The Fusion Language",
+  "description": "Adds syntax highlighting for the Fusion language to Code.",
+  "author": {
+    "name": "Gymate",
+    "email": "support@gymate.io",
+    "url": "https://opensource.gymate.io"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fusion",
+      "aliases": ["Fusion", "fusion"],
+      "extensions": [".fuse",".fn"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icons/fusion.svg",
+        "dark": "./icons/fusion.svg"
+      }
+    }],
+    "grammars": [{
+      "language": "fusion",
+      "scopeName": "source.fusion",
+      "path": "./syntaxes/fusion.tmLanguage.json"
+    }]
+  }
+}
