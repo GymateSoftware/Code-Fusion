@@ -2,7 +2,7 @@
   "name": "fusion-lang",
   "displayName": "The Fusion Language",
   "description": "Adds syntax highlighting for the Fusion language to Code.",
-  "publisher": "Gymate, Inc.",
+  "publisher": "Gymate",
   "repository": {
     "url": "https://github.com/GymateSoftware/Code-Fusion.git"
   },
